@@ -105,6 +105,6 @@ for agent in all_agents:
 
 enemy_states = []
 for enemy_pos in enemy_list_pos:
-    enemy_states.append(state_encode(enemy_pos))
+    enemy_states.append(state_encode(enemy_pos[0], enemy_pos[1]))
 
 env = Enviroment(initial_states = initial_states, enemy_states = enemy_states)
