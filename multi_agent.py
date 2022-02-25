@@ -53,7 +53,7 @@ def run():
     max_score = -10000
 
 
-    for _ in range(300):
+    for episode in range(300):
         actions = []
         done = False
         reward_all = 0
@@ -85,6 +85,9 @@ def run():
             time_step += 1
             states = next_states
             reward_all += sum(rewards)
+
+        for agent in all_agents:
+            agent.decay_epsilon(episode)
 
         rewards_list.append(reward_all)
         timesteps_list.append(time_step)
