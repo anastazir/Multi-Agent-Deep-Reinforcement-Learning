@@ -45,20 +45,6 @@ def decode_state(state_num):
 def state_encode(row,col):
     return row*num_col + col 
 
-all_agents= []
-
-for index in range(4):
-
-    all_agents.append(Agent(index, allplayerpos[index]))
-
-
-initial_states = []
-for agent in all_agents:
-    initial_states.append(state_encode(agent.x, agent.y))
-
-enemy_states = []
-for enemy_pos in enemy_list_pos:
-    enemy_states.append(state_encode(enemy_pos))
 
 def run():
     total_step = 0
@@ -91,8 +77,10 @@ def run():
 
             next_states, rewards, done = env.step(actions)
             for agent in all_agents:
+                agent.set_pos(decode_state(next_states[agent.index]))
                 if done[agent.index] == True:
                     agent.terminal = True
+
             total_step += 1
             time_step += 1
             states = next_states
@@ -101,5 +89,19 @@ def run():
         rewards_list.append(reward_all)
         timesteps_list.append(time_step)
 
+all_agents= []
+
+for index in range(4):
+
+    all_agents.append(Agent(index, allplayerpos[index]))
+
+
+initial_states = []
+for agent in all_agents:
+    initial_states.append(state_encode(agent.x, agent.y))
+
+enemy_states = []
+for enemy_pos in enemy_list_pos:
+    enemy_states.append(state_encode(enemy_pos))
 
 env = Enviroment(initial_states = initial_states, enemy_states = enemy_states)
