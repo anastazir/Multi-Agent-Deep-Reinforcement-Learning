@@ -18,7 +18,7 @@ class Enviroment:
         self.initial_states = initial_states
         self.m = m
         self.n = n
-
+        self.stateSpacePlus = [i for i in range(m*n)]
         self.actionSpace = {'U': -self.m, 'D': self.m, 'L': -1, 'R': 1, 'S': 0}
         self.possibleActions = ['U', 'D', 'L', 'R']
         self.agents_state = initial_states
@@ -44,7 +44,7 @@ class Enviroment:
             else:
                 new_states.append(self.agents_state[i])
             i = i + 1
-        
+        self.agents_state = new_states
         return [new_states, rewards, terminal]
 
     def render(self):
@@ -54,12 +54,6 @@ class Enviroment:
     def actionSpaceSample(self):
         return np.random.choice(self.possibleActions)
 
-    def offGridMove(self, newState, oldState):
-        # if we move into a row not in the grid
-        if newState not in self.stateSpacePlus:
-            return True
-        else:
-            return False
 
     def reset(self):
         return self.initial_states
