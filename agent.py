@@ -8,6 +8,9 @@ from tensorflow.keras.layers import Dense, Embedding, Reshape
 from tensorflow.keras.optimizers import Adam
 
 class Agent:
+    MAX_EPSILON = 1.0
+    MIN_EPSILON = 0.01
+
     def __init__(self, index, pos):
 
         # Initialize atributes
@@ -22,7 +25,7 @@ class Agent:
 
         # Initialize discount and exploration rate
         self.gamma = 0.6
-        self.epsilon = 0.1
+        self.epsilon = self.MAX_EPSILON
 
         # Build networks
         self.q_network = self._build_compile_model()
@@ -74,3 +77,6 @@ class Agent:
     def set_pos(self, pos):
         self.x = pos[0]
         self.y = pos[1]
+    
+    def decode_epsilon(self):
+        pass
