@@ -10,7 +10,7 @@ from tensorflow.keras.optimizers import Adam
 class Agent:
     MAX_EPSILON = 1.0
     MIN_EPSILON = 0.01
-
+    decay_rate = 1e-0
     def __init__(self, index, pos):
 
         # Initialize atributes
@@ -53,7 +53,7 @@ class Agent:
             return 0
 
         if np.random.rand() <= self.epsilon:
-            return np.random.choice([0,1,2,3,4], size=1, replace=False)
+            return possibleActions[np.random.choice([0,1,2,3,4], size=1, replace=False)]
 
         q_values = self.q_network.predict(states[self.index])
         action = np.argmax(q_values[0])
@@ -78,5 +78,7 @@ class Agent:
         self.x = pos[0]
         self.y = pos[1]
     
-    def decode_epsilon(self):
-        pass
+    def decay_epsilon(self, episode):
+        # slowly decrease Epsilon based on our experience
+        self.epsilon = self.MIN_EPSILON + (self.MAX_EPSILON - self.MIN_EPSILON) * \
+        np.exp(-self.decay_rate*episode) 
