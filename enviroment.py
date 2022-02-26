@@ -1,6 +1,6 @@
-from itertools import permutations
+import time
 import numpy as np
-
+from IPython.display import clear_output
 class Enviroment:
     UP = 0
     DOWN = 1
@@ -10,7 +10,6 @@ class Enviroment:
     A = [UP, DOWN, LEFT, RIGHT, STAY]
     A_DIFF = [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]
     num_col = 10
-    action_list=list(permutations(range(0,5)))
     current_state = []
 
     def __init__(self, m = 10, n = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
@@ -48,7 +47,7 @@ class Enviroment:
         self.agents_state = new_states
         return [new_states, rewards, terminal]
 
-    def render(self):
+    def render(self, clear = False):
         print('--------------------------------------------')
 
         for i in range(self.m):
@@ -62,6 +61,9 @@ class Enviroment:
             print('\n')
 
         print('--------------------------------------------')
+        if clear:
+            time.sleep(0.05)
+            clear_output(wait = True)
 
 
     def actionSpaceSample(self):
