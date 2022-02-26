@@ -13,30 +13,12 @@ grid_size = 10
 num_col = grid_size
 game_mode='random'
 
-action_set = {
-    0: 'u',
-    1: 'd',
-    2: 'l',
-    3: 'r',
-    4: 'n'
-}
-
 possibleActions = ['U', 'D', 'L', 'R']
 
-len_action_set=len(action_set)
-
-#4 x 4
-
-
-predator_list=[("Player1","A"),("Player2","B"),("Player3","C"),("Player4","D")]
-
-prey_list=[("Enemy1","E"),("Enemy2","F"),("Enemy3","G"),("Enemy4","H")]
 
 allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
 
 enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
-
-number_predator_player=len(predator_list)
 
 
 def decode_state(state_num):
