@@ -13,7 +13,7 @@ class Enviroment:
     action_list=list(permutations(range(0,5)))
     current_state = []
 
-    def __init__(self, m = 10, n = 10, initial_states = [], enemy_states = []) -> None:
+    def __init__(self, m = 10, n = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
         self.possibleActions = ['U', 'D', 'L', 'R', 'S']
         self.initial_states = initial_states
         self.m = m
@@ -23,6 +23,8 @@ class Enviroment:
         self.possibleActions = ['U', 'D', 'L', 'R']
         self.agents_state = initial_states
         self.enemy_states = enemy_states
+        self.grid = np.zeros((m,n))
+        self.n_agents = n_agents
 
     def step(self, actions):
         new_states = []
@@ -52,7 +54,7 @@ class Enviroment:
 
 
     def actionSpaceSample(self):
-        return np.random.choice(self.possibleActions)
+        return [np.random.choice(self.possibleActions) for _ in range(self.n_agents)]
 
 
     def reset(self):
