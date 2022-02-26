@@ -20,6 +20,7 @@ allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
 
 enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
 
+n_agents = 4
 
 def decode_state(state_num):
     return int(state_num/num_col), state_num%num_col
@@ -76,7 +77,7 @@ def run():
 
 all_agents= []
 
-for index in range(4):
+for index in range(n_agents):
 
     all_agents.append(Agent(index, allplayerpos[index]))
 
@@ -89,4 +90,4 @@ enemy_states = []
 for enemy_pos in enemy_list_pos:
     enemy_states.append(state_encode(enemy_pos[0], enemy_pos[1]))
 
-env = Enviroment(initial_states = initial_states, enemy_states = enemy_states)
+env = Enviroment(initial_states = initial_states, enemy_states = enemy_states, n_agents = n_agents)
