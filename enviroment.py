@@ -75,3 +75,6 @@ class Enviroment:
             return True
         else:
             return False
+
+    def return_state(self, row, col):
+        return row*self.m + col 
