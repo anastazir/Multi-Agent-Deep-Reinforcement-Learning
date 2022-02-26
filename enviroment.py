@@ -20,7 +20,6 @@ class Enviroment:
         self.n = n
         self.stateSpacePlus = [i for i in range(m*n)]
         self.actionSpace = {'U': -self.m, 'D': self.m, 'L': -1, 'R': 1, 'S': 0}
-        self.possibleActions = ['U', 'D', 'L', 'R']
         self.agents_state = initial_states
         self.enemy_states = enemy_states
         self.grid = np.zeros((m,n))
@@ -50,7 +49,19 @@ class Enviroment:
         return [new_states, rewards, terminal]
 
     def render(self):
-        pass
+        print('--------------------------------------------')
+
+        for i in range(self.m):
+            for j in range(self.n):
+                if self.return_state(i, j) in self.agents_state:
+                    print('P', end='\t')
+                elif self.return_state(i, j) in self.enemy_states:
+                    print('X', end='\t')
+                else:
+                    print('-', end='\t')
+            print('\n')
+
+        print('--------------------------------------------')
 
 
     def actionSpaceSample(self):
