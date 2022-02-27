@@ -68,7 +68,12 @@ def run():
 
             next_states, rewards, done = env.step(actions)
             for agent in all_agents:
+                state = np.reshape(states[agent.index], [1, 1])
+                new_state = np.reshape(next_states[agent.index], [1, 1])
                 agent.set_pos(decode_state(next_states[agent.index]))
+                agent.store(state, action_space_dict[actions[agent.index]], rewards[agent.index],\
+                new_state, done[agent.index])
+
                 if done[agent.index] == True:
                     agent.terminal = True
 
