@@ -1,10 +1,9 @@
-import numpy as np
-import random
-from IPython.display import clear_output
-from collections import deque
 import time
-from tensorflow.keras import Model, Sequential
-from tensorflow.keras.layers import Dense, Embedding, Reshape
+import random
+import numpy as np
+from collections                 import deque
+from tensorflow.keras            import Model, Sequential
+from tensorflow.keras.layers     import Dense, Embedding, Reshape
 from tensorflow.keras.optimizers import Adam
 
 class Agent:
@@ -47,7 +46,8 @@ class Agent:
         return model
 
     def alighn_target_model(self):
-        self.target_network.set_weights(self.q_network.get_weights())
+        if self.terminal:
+            self.target_network.set_weights(self.q_network.get_weights())
     
     def act(self, states, possibleActions):
         if self.terminal:
@@ -60,6 +60,8 @@ class Agent:
         return possibleActions[action]
 
     def retrain(self):
+        if len(self.expirience_replay <= self.batch_size):
+            return
         minibatch = random.sample(self.expirience_replay, self.batch_size)
 
         for state, action, reward, next_state, terminated in minibatch:
@@ -86,4 +88,4 @@ class Agent:
     def decay_epsilon(self, episode):
         # slowly decrease Epsilon based on our experience
         self.epsilon = self.MIN_EPSILON + (self.MAX_EPSILON - self.MIN_EPSILON) * \
-        np.exp(-self.decay_rate*episode) 
+        np.exp(-self.decay_rate*episode)
