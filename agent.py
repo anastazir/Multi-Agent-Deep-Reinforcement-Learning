@@ -60,7 +60,7 @@ class Agent:
         return possibleActions[action]
 
     def retrain(self):
-        if len(self.expirience_replay <= self.batch_size):
+        if len(self.expirience_replay) <= self.batch_size:
             return
         minibatch = random.sample(self.expirience_replay, self.batch_size)
 
