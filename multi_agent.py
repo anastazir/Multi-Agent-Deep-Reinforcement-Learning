@@ -9,9 +9,8 @@ from    matplotlib      import pyplot as plt
 
 grid_size = 10
 num_col = grid_size
-game_mode='random'
 
-possibleActions = ['U', 'D', 'L', 'R']
+possibleActions = ['U', 'D', 'L', 'R', 'S']
 
 action_space_dict = {
     "U" : 1,
@@ -24,7 +23,7 @@ action_space_dict = {
 allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
 enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
 batch_size = 32
-n_agents = 4
+n_agents = 2
 replay_memory_len = 2000
 
 def decode_state(state_num):
@@ -33,17 +32,17 @@ def decode_state(state_num):
 def state_encode(row,col):
     return row*num_col + col 
 
+allplayerpos = allplayerpos[: n_agents]
+enemy_list_pos = enemy_list_pos[: n_agents]
 
 def run():
     total_step = 0
     rewards_list = []
     timesteps_list = []
-    max_score = -10000
-
 
     for episode in range(300):
-        actions = []
-        done = False
+        print("Episode number: " + episode)
+
         reward_all = 0
         time_step = 0
         i = 0
@@ -52,36 +51,45 @@ def run():
             agent.terminal = False
         
         states = env.reset()
+        states = np.concatenate((states,enemy_states)).ravel()
 
         for agent in all_agents:
             agent.set_pos(allplayerpos[i])
             i = i + 1
 
+        done = [False for _ in range(n_agents)]
 
-        while not done and time_step < 200:
+        while not any(done) and time_step < 200:
+
+            env.render(clear=True)
+            actions = []
 
             for agent in all_agents:
                 actions.append(agent.act(states, possibleActions))
 
             next_states, rewards, done = env.step(actions)
             for agent in all_agents:
-                state = np.reshape(states[agent.index], [1, 1])
-                new_state = np.reshape(next_states[agent.index], [1, 1])
+
+                next_states = np.array(next_states)
+                next_states = next_states.ravel()
+
                 agent.set_pos(decode_state(next_states[agent.index]))
-                agent.store(state, action_space_dict[actions[agent.index]], rewards[agent.index],\
-                new_state, done[agent.index])
+                agent.store(np.concatenate((states,enemy_states)).ravel(), action_space_dict[actions[agent.index]], \
+                rewards[agent.index], np.concatenate((next_states,enemy_states)).ravel(), done[agent.index])
 
                 if done[agent.index] == True:
                     agent.terminal = True
+                    print("agent reached landmark")
 
             total_step += 1
             time_step += 1
             states = next_states
             reward_all += sum(rewards)
 
-            if len(all_agents[0].expirience_replay) > batch_size:
-                for agent in all_agents:
-                    agent.retrain()
+            for agent in all_agents:
+                if agent.terminal:
+                    agent.alighn_target_model()
+                agent.retrain()
 
         for agent in all_agents:
             agent.decay_epsilon(episode)
