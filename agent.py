@@ -5,12 +5,13 @@ from collections                 import deque
 from tensorflow.keras            import Model, Sequential
 from tensorflow.keras.layers     import Dense, Embedding, Reshape
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models     import load_model
 
 class Agent:
     MAX_EPSILON = 1.0
     MIN_EPSILON = 0.01
     decay_rate = 1e-0
-    def __init__(self, index, pos, batch_size = 32, replay_memory_len = 2000):
+    def __init__(self, index, pos, batch_size = 32, replay_memory_len = 2000, n_agents = 4):
 
         # Initialize atributes
         self._state_size = 100
@@ -23,6 +24,7 @@ class Agent:
         self.x = pos[0]
         self.y = pos[1]
         self.batch_size = batch_size
+        self.n_agents = n_agents
         # Initialize discount and exploration rate
         self.gamma = 0.6
         self.epsilon = self.MAX_EPSILON
@@ -54,8 +56,9 @@ class Agent:
             return 0
         if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
             return possibleActions[np.random.choice([0,1,2,3,4], size=1, replace=False)[0]]
-        state = np.array([states[self.index]])
-        q_values = self.q_network.predict(state)
+        states = np.array(states)
+        states = states.ravel()
+        q_values = self.q_network.predict(states)
         action = np.argmax(q_values[0])
         return possibleActions[action]
 
@@ -65,14 +68,9 @@ class Agent:
         minibatch = random.sample(self.expirience_replay, self.batch_size)
 
         for state, action, reward, next_state, terminated in minibatch:
-            # print("state in retrain is , ", state)
-            # print("next_state in retrain is , ", next_state)
-            # print("actions in retrain is , ", action)
 
             target = self.q_network.predict(state)
             
-            # print("target is ,", target)
-            # print("target[0] is , ", target[0])
             if terminated:
                 target[0][action] = reward
             else:
@@ -80,6 +78,7 @@ class Agent:
                 target[0][action] = reward + self.gamma * np.amax(t)
 
             self.q_network.fit(state, target, epochs=1, verbose=0)
+        # print("len of memory" ,len(self.expirience_replay), " and epsilon is ", self.epsilon)
 
     def set_pos(self, pos):
         self.x = pos[0]
@@ -89,3 +88,9 @@ class Agent:
         # slowly decrease Epsilon based on our experience
         self.epsilon = self.MIN_EPSILON + (self.MAX_EPSILON - self.MIN_EPSILON) * \
         np.exp(-self.decay_rate*episode)
+
+    def save_model(self):
+        self.q_network.save(f"0{self.index}_{self.n_agents}.h5")
+
+    def load_model(self):
+        self.q_network = load_model(f"0{self.index}_{self.n_agents}.h5")
