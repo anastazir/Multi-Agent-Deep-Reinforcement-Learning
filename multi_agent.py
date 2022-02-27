@@ -15,6 +15,13 @@ game_mode='random'
 
 possibleActions = ['U', 'D', 'L', 'R']
 
+action_space_dict = {
+    "U" : 1,
+    "D" : 2,
+    "L" : 3,
+    "R" : 4,
+    "S" : 0
+}
 
 allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
 
