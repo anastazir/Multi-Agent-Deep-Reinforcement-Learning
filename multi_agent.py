@@ -1,13 +1,11 @@
-from agent import Agent
-from Gridworld import Gridworld
-from collections import deque
-import numpy as np
-import random
-from enviroment import Enviroment
-from IPython.display import clear_output
-import pickle 
-from matplotlib import pyplot as plt  
-import time
+import  time
+import  random
+import  pickle 
+import  numpy as np
+from    agent           import Agent
+from    enviroment      import Enviroment
+from    IPython.display import clear_output
+from    matplotlib      import pyplot as plt  
 
 grid_size = 10
 num_col = grid_size
@@ -24,7 +22,6 @@ action_space_dict = {
 }
 
 allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
-
 enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
 batch_size = 32
 n_agents = 4
@@ -82,6 +79,10 @@ def run():
             states = next_states
             reward_all += sum(rewards)
 
+            if len(all_agents[0].expirience_replay) > batch_size:
+                for agent in all_agents:
+                    agent.retrain()
+
         for agent in all_agents:
             agent.decay_epsilon(episode)
 
@@ -92,7 +93,7 @@ all_agents= []
 
 for index in range(n_agents):
 
-    all_agents.append(Agent(index, allplayerpos[index]))
+    all_agents.append(Agent(index, allplayerpos[index], batch_size, replay_memory_len))
 
 
 initial_states = []
