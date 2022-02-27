@@ -26,8 +26,9 @@ action_space_dict = {
 allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
 
 enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
-
+batch_size = 32
 n_agents = 4
+replay_memory_len = 2000
 
 def decode_state(state_num):
     return int(state_num/num_col), state_num%num_col
