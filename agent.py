@@ -11,7 +11,7 @@ class Agent:
     MAX_EPSILON = 1.0
     MIN_EPSILON = 0.01
     decay_rate = 1e-0
-    def __init__(self, index, pos):
+    def __init__(self, index, pos, batch_size = 32, replay_memory_len = 2000):
 
         # Initialize atributes
         self._state_size = 100
@@ -19,10 +19,11 @@ class Agent:
         self._optimizer = Adam(learning_rate=0.01)
         self.index = index
         self.terminal = False
-        self.expirience_replay = deque(maxlen=2000)
+        self.replay_memory_len = replay_memory_len
+        self.expirience_replay = deque(maxlen=self.replay_memory_len)
         self.x = pos[0]
         self.y = pos[1]
-
+        self.batch_size = batch_size
         # Initialize discount and exploration rate
         self.gamma = 0.6
         self.epsilon = self.MAX_EPSILON
@@ -51,21 +52,25 @@ class Agent:
     def act(self, states, possibleActions):
         if self.terminal:
             return 0
-
-        if np.random.rand() <= self.epsilon:
-            return possibleActions[np.random.choice([0,1,2,3,4], size=1, replace=False)]
-
-        q_values = self.q_network.predict(states[self.index])
+        if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
+            return possibleActions[np.random.choice([0,1,2,3,4], size=1, replace=False)[0]]
+        state = np.array([states[self.index]])
+        q_values = self.q_network.predict(state)
         action = np.argmax(q_values[0])
         return possibleActions[action]
 
-    def retrain(self, batch_size):
-        minibatch = random.sample(self.expirience_replay, batch_size)
+    def retrain(self):
+        minibatch = random.sample(self.expirience_replay, self.batch_size)
 
         for state, action, reward, next_state, terminated in minibatch:
+            # print("state in retrain is , ", state)
+            # print("next_state in retrain is , ", next_state)
+            # print("actions in retrain is , ", action)
 
             target = self.q_network.predict(state)
-
+            
+            # print("target is ,", target)
+            # print("target[0] is , ", target[0])
             if terminated:
                 target[0][action] = reward
             else:
