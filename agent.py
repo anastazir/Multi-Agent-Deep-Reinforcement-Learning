@@ -11,10 +11,10 @@ class Agent:
     MAX_EPSILON = 1.0
     MIN_EPSILON = 0.01
     decay_rate = 1e-0
-    def __init__(self, index, pos, batch_size = 32, replay_memory_len = 2000, n_agents = 4):
+    def __init__(self, grid_size, index, pos, batch_size = 32, replay_memory_len = 2000, n_agents = 4):
 
         # Initialize atributes
-        self._state_size = 100
+        self._state_size = grid_size*grid_size
         self._action_size = 5
         self._optimizer = Adam(learning_rate=0.01)
         self.index = index
@@ -55,7 +55,7 @@ class Agent:
         if self.terminal:
             return 0
         if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
-            return possibleActions[np.random.choice([0,1,2,3,4], size=1, replace=False)[0]]
+            return possibleActions[np.random.choice([0,1,2,3,4,0,1,2,3,4,0,1,2,3,4], size=1, replace=False)[0]]
         states = np.array(states)
         states = states.ravel()
         q_values = self.q_network.predict(states)
