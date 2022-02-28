@@ -1,18 +1,20 @@
 import time
 import numpy as np
+import math
 from IPython.display import clear_output
 class Enviroment:
 
-    def __init__(self, m = 10, n = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
+    def __init__(self, grid_size = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
         self.possibleActions = ['U', 'D', 'L', 'R', 'S']
         self.initial_states = initial_states
-        self.m = m
-        self.n = n
-        self.stateSpacePlus = [i for i in range(m*n)]
+        self.grid_size = grid_size
+        self.m = grid_size
+        self.n = grid_size
+        self.stateSpacePlus = [i for i in range(grid_size*grid_size)]
         self.actionSpace = {'U': -self.m, 'D': self.m, 'L': -1, 'R': 1, 'S': 0}
         self.agents_state = initial_states
         self.enemy_states = enemy_states
-        self.grid = np.zeros((m,n))
+        self.grid = np.zeros((grid_size,grid_size))
         self.n_agents = n_agents
 
     def step(self, actions):
@@ -56,12 +58,11 @@ class Enviroment:
             time.sleep(0.05)
             clear_output(wait = True)
 
-
     def actionSpaceSample(self):
         return [np.random.choice(self.possibleActions) for _ in range(self.n_agents)]
 
-
     def reset(self):
+        self.agents_state = self.initial_states
         return self.initial_states
 
     def isTerminalState(self, state):
