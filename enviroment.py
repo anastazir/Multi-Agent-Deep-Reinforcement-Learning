@@ -23,11 +23,11 @@ class Enviroment:
         i = 0
         for action in actions:
             resultingState = self.agents_state[i] + self.actionSpace[action]
-            if  not self.isTerminalState(resultingState):
-                rewards.append(-1)
+            if not self.isTerminalState(resultingState):
+                rewards.append(self.give_reward(resultingState))
                 terminal.append(False)
             else:
-                rewards.append(0)
+                rewards.append(1)
                 terminal.append(True)
 
             if not self.offGridMove(resultingState, self.agents_state[i]):
