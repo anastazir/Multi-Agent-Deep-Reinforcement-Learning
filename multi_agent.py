@@ -20,10 +20,10 @@ action_space_dict = {
     "S" : 0
 }
 
-allplayerpos=[(0,2),(1,5),(0,6),(0,3)]
-enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)]
-batch_size = 32
 n_agents = 2
+allplayerpos=[(0,2),(1,5),(0,6),(0,3)][: n_agents]
+enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)][: n_agents]
+batch_size = 32
 replay_memory_len = 2000
 
 def decode_state(state_num):
@@ -31,9 +31,6 @@ def decode_state(state_num):
 
 def state_encode(row,col):
     return row*num_col + col 
-
-allplayerpos = allplayerpos[: n_agents]
-enemy_list_pos = enemy_list_pos[: n_agents]
 
 def run():
     total_step = 0
@@ -112,4 +109,4 @@ enemy_states = []
 for enemy_pos in enemy_list_pos:
     enemy_states.append(state_encode(enemy_pos[0], enemy_pos[1]))
 
-env = Enviroment(initial_states = initial_states, enemy_states = enemy_states, n_agents = n_agents)
+env = Enviroment(grid_size = grid_size, initial_states = initial_states, enemy_states = enemy_states, n_agents = n_agents)
