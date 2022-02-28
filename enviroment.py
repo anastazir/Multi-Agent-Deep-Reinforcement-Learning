@@ -2,15 +2,6 @@ import time
 import numpy as np
 from IPython.display import clear_output
 class Enviroment:
-    UP = 0
-    DOWN = 1
-    LEFT = 2
-    RIGHT = 3
-    STAY = 4
-    A = [UP, DOWN, LEFT, RIGHT, STAY]
-    A_DIFF = [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]
-    num_col = 10
-    current_state = []
 
     def __init__(self, m = 10, n = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
         self.possibleActions = ['U', 'D', 'L', 'R', 'S']
