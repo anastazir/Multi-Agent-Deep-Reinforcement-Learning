@@ -80,5 +80,20 @@ class Enviroment:
         else:
             return False
 
+    def decode_state(self, state):
+        return int(state/self.grid_size), state%self.grid_size
+
     def return_state(self, row, col):
         return row*self.m + col 
+
+    def give_reward(self, state):
+        state_pos = self.decode_state(state)
+        enemy_positions = [self.decode_state(state) for state in self.enemy_states]
+        distances = []
+
+        for enemy_pos in enemy_positions:
+            distances.append(math.sqrt((enemy_pos[0] - state_pos[0])**2 + (enemy_pos[1] - state_pos[1])**2))
+        if min(distances) <=2:
+            return 0
+        else:
+            return -1
