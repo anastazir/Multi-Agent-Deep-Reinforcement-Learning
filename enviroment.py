@@ -2,20 +2,20 @@ import time
 import numpy as np
 import math
 from IPython.display import clear_output
+from config import *
 class Enviroment:
 
-    def __init__(self, grid_size = 10, initial_states = [], enemy_states = [], n_agents = 4) -> None:
+    def __init__(self, initial_states = [], enemy_states = []) -> None:
         self.possibleActions = ['U', 'D', 'L', 'R', 'S']
         self.initial_states = initial_states
-        self.grid_size = grid_size
-        self.m = grid_size
-        self.n = grid_size
-        self.stateSpacePlus = [i for i in range(grid_size*grid_size)]
+        self.grid_size = GRID_SIZE
+        self.m = self.grid_size
+        self.n = self.grid_size
+        self.stateSpacePlus = [i for i in range(self.grid_size*self.grid_size)]
         self.actionSpace = {'U': -self.m, 'D': self.m, 'L': -1, 'R': 1, 'S': 0}
         self.agents_state = initial_states
         self.enemy_states = enemy_states
-        self.grid = np.zeros((grid_size,grid_size))
-        self.n_agents = n_agents
+        self.n_agents = N_AGENTS
 
     def step(self, actions):
         new_states = []
@@ -25,20 +25,23 @@ class Enviroment:
         i = 0
         for action in actions:
             resultingState = self.agents_state[i] + self.actionSpace[action]
-            if not self.isTerminalState(resultingState):
-                rewards.append(self.give_reward(resultingState))
-                terminal.append(False)
-            else:
-                rewards.append(1)
-                terminal.append(True)
 
-            if not self.offGridMove(resultingState, self.agents_state[i]):
-                new_states.append(resultingState)
-            else:
+            if self.offGridMove(resultingState, self.agents_state[i]):
                 new_states.append(self.agents_state[i])
-            i = i + 1
+                rewards.append(self.give_reward(self.agents_state[i]))
+                if self.isTerminalState(self.agents_state[i]):
+                    terminal.append(True)
+                else:
+                    terminal.append(False)
+            else:
+                new_states.append(resultingState)
+                rewards.append(self.give_reward(resultingState))
+                if self.isTerminalState(resultingState):
+                    terminal.append(True)
+                else:
+                    terminal.append(False)
         self.agents_state = new_states
-        return [new_states, rewards, terminal]
+        return [new_states, rewards, terminal]         
 
     def render(self, clear = False):
         print('--------------------------------------------')
@@ -88,13 +91,18 @@ class Enviroment:
         return row*self.m + col 
 
     def give_reward(self, state):
+        # print("state is ", state)
         state_pos = self.decode_state(state)
+        if state in self.enemy_states:
+            return 1
+        # print("state_pos ,", state_pos)
         enemy_positions = [self.decode_state(state) for state in self.enemy_states]
         distances = []
-
+        # print("enemy_positions, ", enemy_positions)
         for enemy_pos in enemy_positions:
             distances.append(math.sqrt((enemy_pos[0] - state_pos[0])**2 + (enemy_pos[1] - state_pos[1])**2))
-        if min(distances) <=2:
+        # print("distances", distances)
+        if min(distances) <2:
             return 0
         else:
             return -1
