@@ -96,3 +96,6 @@ class Agent:
 
     def load_model(self):
         self.q_network = load_model(f"0{self.index}_{self.n_agents}.h5")
+
+    def return_coordinates(self):
+        return (self.x, self.y)
