@@ -1,6 +1,7 @@
 import time
 import random
 import numpy as np
+from config                      import *
 from collections                 import deque
 from tensorflow.keras            import Model, Sequential
 from tensorflow.keras.layers     import Dense, Embedding, Reshape
@@ -8,25 +9,25 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models     import load_model
 
 class Agent:
-    MAX_EPSILON = 1.0
-    MIN_EPSILON = 0.01
-    decay_rate = 1e-0
-    def __init__(self, grid_size, index, pos, batch_size = 32, replay_memory_len = 2000, n_agents = 4):
+    MAX_EPSILON = MAX_EPSILON
+    MIN_EPSILON = MIN_EPSILON
+    decay_rate = DECAY_RATE
+    def __init__(self, index, pos):
 
         # Initialize atributes
-        self._state_size = grid_size*grid_size
+        self._state_size = GRID_SIZE*GRID_SIZE
         self._action_size = 5
-        self._optimizer = Adam(learning_rate=0.01)
+        self._optimizer = Adam(learning_rate=LEARNING_RATE)
         self.index = index
         self.terminal = False
-        self.replay_memory_len = replay_memory_len
+        self.replay_memory_len = REPLAY_MEMORY_LEN
         self.expirience_replay = deque(maxlen=self.replay_memory_len)
         self.x = pos[0]
         self.y = pos[1]
-        self.batch_size = batch_size
-        self.n_agents = n_agents
+        self.batch_size = BATCH_SIZE
+        self.n_agents = N_AGENTS
         # Initialize discount and exploration rate
-        self.gamma = 0.6
+        self.gamma = GAMMA
         self.epsilon = self.MAX_EPSILON
 
         # Build networks
@@ -43,7 +44,7 @@ class Agent:
         model.add(Reshape((10,)))
         model.add(Dense(50, activation='relu'))
         model.add(Dense(50, activation='relu'))
-        model.add(Dense(self._action_size, activation='linear'))
+        model.add(Dense(ACTION_SIZE, activation='linear'))
         model.compile(loss='mse', optimizer=self._optimizer)
         return model
 
@@ -55,6 +56,7 @@ class Agent:
         if self.terminal:
             return 0
         if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
+            # print("random action taken")
             return possibleActions[np.random.choice([0,1,2,3,4,0,1,2,3,4,0,1,2,3,4], size=1, replace=False)[0]]
         states = np.array(states)
         states = states.ravel()
