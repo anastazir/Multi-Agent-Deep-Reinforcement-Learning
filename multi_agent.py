@@ -1,13 +1,12 @@
 import  time
-import  random
-import  pickle 
 import  numpy as np
+from    config          import *
 from    agent           import Agent
 from    enviroment      import Enviroment
 from    IPython.display import clear_output
-from    matplotlib      import pyplot as plt  
+from    matplotlib      import pyplot as plt
 
-grid_size = 10
+grid_size = GRID_SIZE
 num_col = grid_size
 
 possibleActions = ['U', 'D', 'L', 'R', 'S']
@@ -20,11 +19,11 @@ action_space_dict = {
     "S" : 0
 }
 
-n_agents = 2
-allplayerpos=[(0,2),(1,5),(0,6),(0,3)][: n_agents]
-enemy_list_pos=[(7,5),(7,3),(6,6),(6,1)][: n_agents]
-batch_size = 32
-replay_memory_len = 2000
+n_agents          = N_AGENTS
+allplayerpos      = PLAYER_POS[: n_agents]
+enemy_list_pos    = ENEMY_POS[: n_agents]
+batch_size        = BATCH_SIZE
+replay_memory_len = REPLAY_MEMORY_LEN
 
 def decode_state(state_num):
     return int(state_num/num_col), state_num%num_col
@@ -37,7 +36,7 @@ def run():
     rewards_list = []
     timesteps_list = []
 
-    for episode in range(300):
+    for episode in range(EPISODES):
         print("Episode number: " + episode)
 
         reward_all = 0
@@ -56,7 +55,7 @@ def run():
 
         done = [False for _ in range(n_agents)]
 
-        while not any(done) and time_step < 200:
+        while not any(done):
 
             env.render(clear=True)
             actions = []
@@ -86,7 +85,8 @@ def run():
             for agent in all_agents:
                 if agent.terminal:
                     agent.alighn_target_model()
-                agent.retrain()
+                if time_step % REPLAY_STEPS == 0:
+                    agent.retrain()
 
         for agent in all_agents:
             agent.decay_epsilon(episode)
