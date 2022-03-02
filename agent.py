@@ -1,4 +1,3 @@
-import time
 import random
 import numpy as np
 from config                      import *
@@ -42,8 +41,8 @@ class Agent:
         model = Sequential()
         model.add(Embedding(self._state_size, 10, input_length=1))
         model.add(Reshape((10,)))
-        model.add(Dense(50, activation='relu'))
-        model.add(Dense(50, activation='relu'))
+        model.add(Dense(HIDDEN_LAYER_01, activation='relu'))
+        model.add(Dense(HIDDEN_LAYER_02, activation='relu'))
         model.add(Dense(ACTION_SIZE, activation='linear'))
         model.compile(loss='mse', optimizer=self._optimizer)
         return model
@@ -56,8 +55,7 @@ class Agent:
         if self.terminal:
             return 0
         if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
-            # print("random action taken")
-            return possibleActions[np.random.choice([0,1,2,3,4,0,1,2,3,4,0,1,2,3,4], size=1, replace=False)[0]]
+            return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
         states = np.array(states)
         states = states.ravel()
         q_values = self.q_network.predict(states)
@@ -68,9 +66,7 @@ class Agent:
         if len(self.expirience_replay) <= self.batch_size:
             return
         minibatch = random.sample(self.expirience_replay, self.batch_size)
-
         for state, action, reward, next_state, terminated in minibatch:
-
             target = self.q_network.predict(state)
             
             if terminated:
@@ -92,10 +88,10 @@ class Agent:
         np.exp(-self.decay_rate*episode)
 
     def save_model(self):
-        self.q_network.save(f"0{self.index}_{self.n_agents}.h5")
+        self.q_network.save(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}.h5")
 
     def load_model(self):
-        self.q_network = load_model(f"0{self.index}_{self.n_agents}.h5")
+        self.q_network = load_model(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}.h5")
 
     def return_coordinates(self):
         return (self.x, self.y)
