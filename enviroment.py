@@ -6,7 +6,7 @@ from config import *
 class Enviroment:
 
     def __init__(self, initial_states = [], enemy_states = []) -> None:
-        self.possibleActions = ['U', 'D', 'L', 'R', 'S']
+        self.possibleActions = POSSIBLE_ACTIONS
         self.initial_states = initial_states
         self.grid_size = GRID_SIZE
         self.m = self.grid_size
@@ -28,7 +28,7 @@ class Enviroment:
 
             if self.offGridMove(resultingState, self.agents_state[i]):
                 new_states.append(self.agents_state[i])
-                rewards.append(self.give_reward(self.agents_state[i]))
+                rewards.append(PENALTY_REWARD)
                 if self.isTerminalState(self.agents_state[i]):
                     terminal.append(True)
                 else:
@@ -94,7 +94,7 @@ class Enviroment:
         # print("state is ", state)
         state_pos = self.decode_state(state)
         if state in self.enemy_states:
-            return 1
+            return POSITIVE_REWARD
         # print("state_pos ,", state_pos)
         enemy_positions = [self.decode_state(state) for state in self.enemy_states]
         distances = []
@@ -103,6 +103,6 @@ class Enviroment:
             distances.append(math.sqrt((enemy_pos[0] - state_pos[0])**2 + (enemy_pos[1] - state_pos[1])**2))
         # print("distances", distances)
         if min(distances) <2:
-            return 0
+            return PROXIMITY_REWARD
         else:
-            return -1
+            return NEGATIVE_REWARD
