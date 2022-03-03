@@ -8,11 +8,10 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models     import load_model
 
 class Agent:
-    MAX_EPSILON = MAX_EPSILON
-    MIN_EPSILON = MIN_EPSILON
-    decay_rate = DECAY_RATE
-    def __init__(self, index, pos):
 
+    decay_rate = DECAY_RATE
+    def __init__(self, index, pos, test = False):
+        self.test = test
         # Initialize atributes
         self._state_size = GRID_SIZE*GRID_SIZE
         self._action_size = 5
@@ -27,7 +26,7 @@ class Agent:
         self.n_agents = N_AGENTS
         # Initialize discount and exploration rate
         self.gamma = GAMMA
-        self.epsilon = self.MAX_EPSILON
+        self.epsilon = MAX_EPSILON if not test else MIN_EPSILON
 
         # Build networks
         self.q_network = self._build_compile_model()
@@ -68,7 +67,7 @@ class Agent:
         minibatch = random.sample(self.expirience_replay, self.batch_size)
         for state, action, reward, next_state, terminated in minibatch:
             target = self.q_network.predict(state)
-            
+
             if terminated:
                 target[0][action] = reward
             else:
@@ -81,10 +80,10 @@ class Agent:
     def set_pos(self, pos):
         self.x = pos[0]
         self.y = pos[1]
-    
+
     def decay_epsilon(self, episode):
         # slowly decrease Epsilon based on our experience
-        self.epsilon = self.MIN_EPSILON + (self.MAX_EPSILON - self.MIN_EPSILON) * \
+        self.epsilon = MIN_EPSILON + (MAX_EPSILON - MIN_EPSILON) * \
         np.exp(-self.decay_rate*episode)
 
     def save_model(self):
