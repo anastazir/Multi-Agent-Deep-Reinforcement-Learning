@@ -7,20 +7,20 @@ PLAYER_POS        = [(0,2),(1,5),(0,6),(0,3)]
 ENEMY_POS         = [(4,4),(3,2),(6,6),(6,1)]
 
 BATCH_SIZE        = 256
-REPLAY_MEMORY_LEN = 10000
+REPLAY_MEMORY_LEN = 2000
 EPOCHS            = 1
 
 ACTION_SIZE       = len(POSSIBLE_ACTIONS)
 
-LEARNING_RATE     = 0.8   # 5e-05
+LEARNING_RATE     = 0.001 # 5e-05
 GAMMA             = 0.95  # 0.6
 DECAY_RATE        = 0.05
 MAX_EPSILON       = 1.0
 MIN_EPSILON       = 0.01
 
-REPLAY_STEPS      = 5
-TIME_STEPS        = 51
-EPISODES          = 400
+REPLAY_STEPS      = 6
+TIME_STEPS        = 26
+EPISODES          = 75
 
 POSITIVE_REWARD   = 10
 PROXIMITY_REWARD  = 0
