@@ -47,6 +47,7 @@ class Agent:
         return model
 
     def alighn_target_model(self):
+        self.save_model()
         if self.terminal:
             self.target_network.set_weights(self.q_network.get_weights())
     
@@ -94,3 +95,10 @@ class Agent:
 
     def return_coordinates(self):
         return (self.x, self.y)
+
+    def print_summary(self):
+        print("q_network summary")
+        self.q_network.summary()
+        print("--------------")
+        print("target_network")
+        self.target_network.summary()
