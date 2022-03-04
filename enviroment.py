@@ -1,21 +1,22 @@
 import time
+import random
 import numpy as np
 import math
 from IPython.display import clear_output
 from config import *
 class Enviroment:
 
-    def __init__(self, initial_states = [], enemy_states = []) -> None:
+    def __init__(self, initial_states = [], enemy_states = [], type = "stick") -> None:
         self.possibleActions = POSSIBLE_ACTIONS
         self.initial_states = initial_states
         self.grid_size = GRID_SIZE
         self.m = self.grid_size
-        self.n = self.grid_size
         self.stateSpacePlus = [i for i in range(self.grid_size*self.grid_size)]
         self.actionSpace = {'U': -self.m, 'D': self.m, 'L': -1, 'R': 1, 'S': 0}
         self.agents_state = initial_states
         self.enemy_states = enemy_states
         self.n_agents = N_AGENTS
+        self.type = type
 
     def step(self, actions):
         new_states = []
@@ -47,7 +48,7 @@ class Enviroment:
         print('--------------------------------------------')
 
         for i in range(self.m):
-            for j in range(self.n):
+            for j in range(self.m):
                 if self.return_state(i, j) in self.agents_state:
                     print('P', end='\t')
                 elif self.return_state(i, j) in self.enemy_states:
@@ -66,7 +67,9 @@ class Enviroment:
 
     def reset(self):
         self.agents_state = self.initial_states
-        return self.initial_states
+        if self.type == "random":
+            self.enemy_states = [random.randint(4, GRID_SIZE*GRID_SIZE - 1)  for _ in range(0, N_AGENTS)]
+        return [self.initial_states, self.enemy_states]
 
     def isTerminalState(self, state):
         if state in self.enemy_states:
