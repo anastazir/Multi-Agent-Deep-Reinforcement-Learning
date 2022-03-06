@@ -41,6 +41,7 @@ class Enviroment:
                     terminal.append(True)
                 else:
                     terminal.append(False)
+            i+=1
         self.agents_state = new_states
         return [new_states, rewards, terminal]         
 
@@ -69,10 +70,12 @@ class Enviroment:
         return [np.random.choice(self.possibleActions) for _ in range(self.n_agents)]
 
     def reset(self):
-        self.agents_state = self.initial_states
         if self.type == "random":
-            self.enemy_states = [random.randint(4, GRID_SIZE*GRID_SIZE - 1)  for _ in range(0, N_AGENTS)]
-        return [self.initial_states, self.enemy_states]
+            self.agents_state = [random.randint(0, 18)  for _ in range(0, N_AGENTS)]
+            self.initial_states = self.agents_state
+        else:
+            self.agents_state = self.initial_states
+        return [self.agents_state, self.enemy_states]
 
     def isTerminalState(self, state):
         if state in self.enemy_states:
