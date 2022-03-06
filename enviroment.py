@@ -109,3 +109,6 @@ class Enviroment:
             return PROXIMITY_REWARD
         else:
             return NEGATIVE_REWARD
+
+    def status(self):
+        return [self.agents_state, self.enemy_states]
