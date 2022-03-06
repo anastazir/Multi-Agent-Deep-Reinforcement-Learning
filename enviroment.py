@@ -49,7 +49,10 @@ class Enviroment:
 
         for i in range(self.m):
             for j in range(self.m):
-                if self.return_state(i, j) in self.agents_state:
+                if self.return_state(i, j) in self.enemy_states and\
+                      self.return_state(i, j) in self.agents_state:
+                    print("O", end='\t')
+                elif self.return_state(i, j) in self.agents_state:
                     print('P', end='\t')
                 elif self.return_state(i, j) in self.enemy_states:
                     print('X', end='\t')
