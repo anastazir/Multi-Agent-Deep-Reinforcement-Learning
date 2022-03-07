@@ -29,6 +29,8 @@ class Agent:
         self.model = self._build_compile_model()
 
     def store(self, new_state, reward, done, state, action):
+        if self.terminal:
+            return
         self.expirience_replay.append((new_state, reward, done, state, action))
 
     def _build_compile_model(self):
@@ -41,7 +43,7 @@ class Agent:
 
     def act(self, state, possibleActions):
         if self.terminal:
-            return 4
+            return possibleActions[4]
         if np.random.rand() < self.epsilon and not self.test:
             print("random action")
             return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
