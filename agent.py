@@ -10,11 +10,10 @@ from tensorflow.keras.models     import load_model
 class Agent:
 
     decay_rate = DECAY_RATE
-    def __init__(self, index, pos, test = False):
+    def __init__(self, index, pos, test = False, type = "sticky"):
         self.test = test
-        # Initialize atributes
-        self._state_size = GRID_SIZE*GRID_SIZE
-        self._action_size = 5
+        self.state_size = GRID_SIZE*GRID_SIZE
+        self.action_size = 5
         self._optimizer = Adam(learning_rate=LEARNING_RATE)
         self.index = index
         self.terminal = False
@@ -24,81 +23,62 @@ class Agent:
         self.y = pos[1]
         self.batch_size = BATCH_SIZE
         self.n_agents = N_AGENTS
-        # Initialize discount and exploration rate
         self.gamma = GAMMA
         self.epsilon = MAX_EPSILON if not test else MIN_EPSILON
+        self.type = type
+        self.model = self._build_compile_model()
 
-        # Build networks
-        self.q_network = self._build_compile_model()
-        self.target_network = self._build_compile_model()
-        self.alighn_target_model()
-
-    def store(self, state, action, reward, next_state, terminated):
-        self.expirience_replay.append((state, action, reward, next_state, terminated))
+    def store(self, new_state, reward, done, state, action):
+        self.expirience_replay.append((new_state, reward, done, state, action))
 
     def _build_compile_model(self):
         model = Sequential()
-        model.add(Embedding(self._state_size, 10, input_length=1))
-        model.add(Reshape((10,)))
-        model.add(Dense(HIDDEN_LAYER_01, activation='relu'))
-        model.add(Dense(HIDDEN_LAYER_02, activation='relu'))
+        model.add(Dense(32, input_dim=self.state_size, activation='relu'))
+        model.add(Dense(32, activation='relu'))
         model.add(Dense(ACTION_SIZE, activation='linear'))
         model.compile(loss='mse', optimizer=self._optimizer)
         return model
 
-    def alighn_target_model(self):
-        self.save_model()
+    def act(self, state, possibleActions):
         if self.terminal:
-            self.target_network.set_weights(self.q_network.get_weights())
-    
-    def act(self, states, possibleActions):
-        if self.terminal:
-            return 0
-        if np.random.rand() <= self.epsilon or self.batch_size > len(self.expirience_replay):
+            return 4
+        if np.random.rand() < self.epsilon and not self.test:
+            print("random action")
             return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
-        states = np.array(states)
-        states = states.ravel()
-        q_values = self.q_network.predict(states)
-        action = np.argmax(q_values[0])
-        return possibleActions[action]
+        return possibleActions[np.argmax(self.model.predict(state))]
 
-    def retrain(self):
-        if len(self.expirience_replay) <= self.batch_size:
+
+    def retrain(self, episode):
+        if len(self.expirience_replay) <= BATCH_SIZE:
             return
-        minibatch = random.sample(self.expirience_replay, self.batch_size)
-        for state, action, reward, next_state, terminated in minibatch:
-            target = self.q_network.predict(state)
+        minibatch=random.sample(self.expirience_replay, BATCH_SIZE)
+        for new_state, reward, done, state, action in minibatch:
+            target= reward
+            if not done:
+                target=reward + self.gamma* np.amax(self.model.predict(new_state))
+            target_f= self.model.predict(state)
+            target_f[0][action]= target
+            self.model.fit(state, target_f, epochs=1, verbose=0)
 
-            if terminated:
-                target[0][action] = reward
-            else:
-                t = self.target_network.predict(next_state)
-                target[0][action] = reward + self.gamma * np.amax(t)
-
-            self.q_network.fit(state, target, epochs=1, verbose=0)
-        # print("len of memory" ,len(self.expirience_replay), " and epsilon is ", self.epsilon)
+        if self.epsilon > MIN_EPSILON:
+            self.epsilon = MIN_EPSILON + (MAX_EPSILON - MIN_EPSILON) * \
+            np.exp(-DECAY_RATE*episode)
+        print("epsilon ", self.epsilon)
 
     def set_pos(self, pos):
         self.x = pos[0]
         self.y = pos[1]
 
-    def decay_epsilon(self, episode):
-        # slowly decrease Epsilon based on our experience
-        self.epsilon = MIN_EPSILON + (MAX_EPSILON - MIN_EPSILON) * \
-        np.exp(-self.decay_rate*episode)
-
     def save_model(self):
-        self.q_network.save(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}.h5")
+        self.model.save(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}.h5")
 
     def load_model(self):
-        self.q_network = load_model(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}.h5")
+        self.model = load_model(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}.h5")
 
     def return_coordinates(self):
         return (self.x, self.y)
 
     def print_summary(self):
-        print("q_network summary")
-        self.q_network.summary()
+        print("model summary")
+        self.model.summary()
         print("--------------")
-        print("target_network")
-        self.target_network.summary()
