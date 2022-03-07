@@ -2,8 +2,8 @@ import random
 import numpy as np
 from config                      import *
 from collections                 import deque
-from tensorflow.keras            import Model, Sequential
-from tensorflow.keras.layers     import Dense, Embedding, Reshape
+from tensorflow.keras            import Sequential
+from tensorflow.keras.layers     import Dense
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models     import load_model
 
