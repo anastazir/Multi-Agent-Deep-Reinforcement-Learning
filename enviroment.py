@@ -1,8 +1,6 @@
-import time
 import random
 import numpy as np
 import math
-from IPython.display import clear_output
 from config import *
 class Enviroment:
 
@@ -45,7 +43,7 @@ class Enviroment:
         self.agents_state = new_states
         return [new_states, rewards, terminal]         
 
-    def render(self, clear = False):
+    def render(self):
         print('--------------------------------------------')
 
         for i in range(self.m):
@@ -62,9 +60,6 @@ class Enviroment:
             print('\n')
 
         print('--------------------------------------------')
-        if clear:
-            time.sleep(0.05)
-            clear_output(wait = True)
 
     def actionSpaceSample(self):
         return [np.random.choice(self.possibleActions) for _ in range(self.n_agents)]
@@ -100,17 +95,15 @@ class Enviroment:
         return row*self.m + col 
 
     def give_reward(self, state):
-        # print("state is ", state)
         state_pos = self.decode_state(state)
-        if state in self.enemy_states:
+
+        if self.isTerminalState(state):
             return POSITIVE_REWARD
-        # print("state_pos ,", state_pos)
+
         enemy_positions = [self.decode_state(state) for state in self.enemy_states]
         distances = []
-        # print("enemy_positions, ", enemy_positions)
         for enemy_pos in enemy_positions:
             distances.append(math.sqrt((enemy_pos[0] - state_pos[0])**2 + (enemy_pos[1] - state_pos[1])**2))
-        # print("distances", distances)
         if min(distances) <2:
             return PROXIMITY_REWARD
         else:
