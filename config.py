@@ -2,6 +2,7 @@ N_AGENTS          = 1
 GRID_SIZE         = 5
 POSSIBLE_ACTIONS  = ['U', 'D', 'L', 'R', 'S']
 POSSIBLE_ACTIONS_NUM = [0, 1 ,2, 3, 4]
+STATE_SIZE        = GRID_SIZE*GRID_SIZE 
 
 PLAYER_POS        = [(0,2),(1,5),(0,6),(0,3)]
 ENEMY_POS         = [(4,4),(3,2),(6,6),(6,1)]
