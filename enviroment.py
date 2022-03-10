@@ -1,7 +1,9 @@
+import time
 import random
 import numpy as np
 import math
 from config import *
+from landmark import Landmark
 class Enviroment:
 
     def __init__(self, initial_states = [], enemy_states = [], type = "stick") -> None:
@@ -15,6 +17,7 @@ class Enviroment:
         self.enemy_states = enemy_states
         self.n_agents = N_AGENTS
         self.type = type
+        self.all_landmarks = [Landmark(index, enemy_states[index]) for index in range(len(enemy_states))]
 
     def step(self, actions):
         new_states = []
@@ -28,20 +31,17 @@ class Enviroment:
             if self.offGridMove(resultingState, self.agents_state[i]):
                 new_states.append(self.agents_state[i])
                 rewards.append(PENALTY_REWARD)
-                if self.isTerminalState(self.agents_state[i]):
-                    terminal.append(True)
-                else:
-                    terminal.append(False)
+                terminal.append(False)
             else:
                 new_states.append(resultingState)
                 rewards.append(self.give_reward(resultingState))
-                if self.isTerminalState(resultingState):
+                if rewards[-1] == POSITIVE_REWARD:
                     terminal.append(True)
                 else:
                     terminal.append(False)
             i+=1
         self.agents_state = new_states
-        return [new_states, rewards, terminal]         
+        return [new_states, rewards, terminal]
 
     def render(self):
         print('--------------------------------------------')
@@ -65,6 +65,9 @@ class Enviroment:
         return [np.random.choice(self.possibleActions) for _ in range(self.n_agents)]
 
     def reset(self):
+        for landmark in self.all_landmarks:
+            landmark.reset()
+
         if self.type == "random":
             self.agents_state = [random.randint(0, 18)  for _ in range(0, N_AGENTS)]
             self.initial_states = self.agents_state
@@ -74,7 +77,11 @@ class Enviroment:
 
     def isTerminalState(self, state):
         if state in self.enemy_states:
-            return True
+            for landmark in self.all_landmarks:
+                if landmark.state == state and not landmark.is_captured:
+                    landmark.captured()
+                    return True
+            return False
         else:
             return False
 
@@ -96,14 +103,15 @@ class Enviroment:
 
     def give_reward(self, state):
         state_pos = self.decode_state(state)
-
         if self.isTerminalState(state):
             return POSITIVE_REWARD
-
-        enemy_positions = [self.decode_state(state) for state in self.enemy_states]
         distances = []
-        for enemy_pos in enemy_positions:
-            distances.append(math.sqrt((enemy_pos[0] - state_pos[0])**2 + (enemy_pos[1] - state_pos[1])**2))
+        for landmark in self.all_landmarks:
+            if not landmark.is_captured:
+                distances.append(math.sqrt((landmark.x - state_pos[0])**2 + (landmark.y - state_pos[1])**2))
+        if not distances:
+            print("No distances were found")
+            return NEGATIVE_REWARD
         if min(distances) <2:
             return PROXIMITY_REWARD
         else:
