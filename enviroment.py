@@ -2,6 +2,7 @@ import time
 import random
 import numpy as np
 import math
+from IPython.display import clear_output
 from config import *
 from landmark import Landmark
 class Enviroment:
@@ -18,7 +19,7 @@ class Enviroment:
         self.n_agents = N_AGENTS
         self.type = type
         self.all_landmarks = [Landmark(index, enemy_states[index]) for index in range(len(enemy_states))]
-
+        self.obstruction_states = [self.return_state(i, j) for i, j in OBSTRUCTION_P0S]
     def step(self, actions):
         new_states = []
         rewards = []
@@ -48,13 +49,15 @@ class Enviroment:
 
         for i in range(self.m):
             for j in range(self.m):
-                if self.return_state(i, j) in self.enemy_states and\
+                if self.return_state(i, j) in self.enemy_states and \
                       self.return_state(i, j) in self.agents_state:
                     print("O", end='\t')
                 elif self.return_state(i, j) in self.agents_state:
                     print('P', end='\t')
                 elif self.return_state(i, j) in self.enemy_states:
                     print('X', end='\t')
+                elif self.return_state(i, j) in self.obstruction_states and self.type == "obstruction":
+                    print("■", end='\t')
                 else:
                     print('-', end='\t')
             print('\n')
@@ -71,7 +74,7 @@ class Enviroment:
         if self.type == "random":
             self.agents_state = [random.randint(0, 18)  for _ in range(0, N_AGENTS)]
             self.initial_states = self.agents_state
-        else:
+        else: 
             self.agents_state = self.initial_states
         return [self.agents_state, self.enemy_states]
 
@@ -92,6 +95,8 @@ class Enviroment:
             return True
         elif oldState % self.m == self.m - 1 and newState % self.m == 0:
             return True
+        elif newState in self.obstruction_states and self.type == "obstruction":
+            return True
         else:
             return False
 
@@ -105,7 +110,9 @@ class Enviroment:
         state_pos = self.decode_state(state)
         if self.isTerminalState(state):
             return POSITIVE_REWARD
+
         distances = []
+
         for landmark in self.all_landmarks:
             if not landmark.is_captured:
                 distances.append(math.sqrt((landmark.x - state_pos[0])**2 + (landmark.y - state_pos[1])**2))
