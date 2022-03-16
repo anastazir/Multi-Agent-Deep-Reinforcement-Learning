@@ -1,11 +1,12 @@
-N_AGENTS          = 1
+N_AGENTS          = 2
 GRID_SIZE         = 5
 POSSIBLE_ACTIONS  = ['U', 'D', 'L', 'R', 'S']
 POSSIBLE_ACTIONS_NUM = [0, 1 ,2, 3, 4]
 STATE_SIZE        = GRID_SIZE*GRID_SIZE 
 
-PLAYER_POS        = [(0,2),(1,5),(0,6),(0,3)]
-ENEMY_POS         = [(4,4),(3,2),(6,6),(6,1)]
+PLAYER_POS        = [(0,0), (0,4)]
+ENEMY_POS         = [(4,0), (4,4)]
+OBSTRUCTION_P0S   = [(2,0), (2,2), (2,4)]
 
 BATCH_SIZE        = 256
 REPLAY_MEMORY_LEN = 2000
@@ -20,7 +21,7 @@ MAX_EPSILON       = 1.0
 MIN_EPSILON       = 0.01
 
 REPLAY_STEPS      = 6
-TIME_STEPS        = 26
+TIME_STEPS        = 50
 EPISODES          = 75
 
 POSITIVE_REWARD   = 10
