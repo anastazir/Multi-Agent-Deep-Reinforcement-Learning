@@ -24,7 +24,7 @@ class Enviroment:
         new_states = []
         rewards = []
         terminal = []
-
+        new_positions = []
         i = 0
         for action in actions:
             resultingState = self.agents_state[i] + self.actionSpace[action]
@@ -42,7 +42,11 @@ class Enviroment:
                     terminal.append(False)
             i+=1
         self.agents_state = new_states
-        return [new_states, rewards, terminal]
+
+        for i in range(len(new_states)):
+            new_positions.append(self.decode_state(new_states[i]))
+
+        return [new_positions, rewards, terminal]
 
     def render(self):
         print('--------------------------------------------')
@@ -71,12 +75,13 @@ class Enviroment:
         for landmark in self.all_landmarks:
             landmark.reset()
 
-        if self.type == "random":
-            self.agents_state = [random.randint(0, 18)  for _ in range(0, N_AGENTS)]
-            self.initial_states = self.agents_state
-        else: 
-            self.agents_state = self.initial_states
-        return [self.agents_state, self.enemy_states]
+        # if self.type == "random":
+        #     self.agents_state = [self.decode_state(random.randint(0, 18))  for _ in range(0, N_AGENTS)]
+        #     self.initial_states = self.agents_state
+        # else: 
+        self.agents_state = self.initial_states
+
+        return [PLAYER_POS[ : self.n_agents], ENEMY_POS[ : self.n_agents]]
 
     def isTerminalState(self, state):
         if state in self.enemy_states:

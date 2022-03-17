@@ -3,9 +3,9 @@ GRID_SIZE         = 5
 POSSIBLE_ACTIONS  = ['U', 'D', 'L', 'R', 'S']
 POSSIBLE_ACTIONS_NUM = [0, 1 ,2, 3, 4]
 STATE_SIZE        = GRID_SIZE*GRID_SIZE 
-
+NEW_STATE_SIZE    = N_AGENTS*4
 PLAYER_POS        = [(0,0), (0,4)]
-ENEMY_POS         = [(4,0), (4,4)]
+ENEMY_POS         = [(4,1), (4,3)]
 OBSTRUCTION_P0S   = [(2,0), (2,2), (2,4)]
 
 BATCH_SIZE        = 256
