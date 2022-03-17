@@ -12,7 +12,7 @@ class Agent:
     decay_rate = DECAY_RATE
     def __init__(self, index, pos, test = False, type = "sticky"):
         self.test = test
-        self.state_size = GRID_SIZE*GRID_SIZE
+        self.state_size = NEW_STATE_SIZE
         self.action_size = 5
         self._optimizer = Adam(learning_rate=LEARNING_RATE)
         self.index = index
@@ -44,7 +44,7 @@ class Agent:
     def act(self, state, possibleActions):
         if self.terminal:
             return possibleActions[4]
-        if np.random.rand() < self.epsilon and not self.test:
+        if np.random.rand() < self.epsilon and not self.test and self.epsilon >=3.0:
             print("random action")
             return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
         return possibleActions[np.argmax(self.model.predict(state))]
