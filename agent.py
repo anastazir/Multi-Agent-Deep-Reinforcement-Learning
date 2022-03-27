@@ -44,8 +44,8 @@ class Agent:
     def act(self, state, possibleActions):
         if self.terminal:
             return possibleActions[4]
-        if np.random.rand() < self.epsilon and not self.test and self.epsilon >=3.0:
-            print("random action")
+        if np.random.rand() < self.epsilon and not self.test:
+            print("random action", self.index)
             return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
         return possibleActions[np.argmax(self.model.predict(state))]
 

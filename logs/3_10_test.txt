@@ -1,0 +1,2574 @@
+Episode number:  1
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  2
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  3
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  4
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  5
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  6
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  7
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  8
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  9
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  10
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  11
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  12
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  13
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  14
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  15
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  16
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  17
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  18
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  19
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  20
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  21
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  22
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  23
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  24
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  25
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  26
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  27
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  28
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  29
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  30
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  31
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  32
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  33
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  34
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  35
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  36
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  37
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  38
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  39
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  40
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  41
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  42
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  43
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  44
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  45
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  46
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  47
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  48
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  49
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  50
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  51
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  52
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  53
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  54
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  55
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  56
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  57
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  58
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  59
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  60
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  61
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  62
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  63
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  64
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  65
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  66
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  67
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  68
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  69
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  70
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  71
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  72
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  73
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  74
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  75
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  76
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  77
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  78
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  79
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  80
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  81
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  82
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  83
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  84
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  85
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  86
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  87
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  88
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  89
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  90
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  91
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  92
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  93
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  94
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  95
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  96
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  97
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  98
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12
+Episode number:  99
+player states:  [(0, 0), (0, 9), (9, 0)]
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'R']
+actions ['D', 'D', 'U']
+actions ['D', 'D', 'U']
+actions ['D', 'L', 'R']
+actions ['D', 'L', 'R']
+actions ['R', 'D', 'U']
+actions ['R', 'D', 'U']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'R']
+actions ['R', 'L', 'U']
+actions ['R', 'L', 'U']
+landmark captured 0
+landmark captured 1
+landmark captured 2
+actions ['R', 'L', 'U']
+agent reached landmark-------------------------------- 0
+agent reached landmark-------------------------------- 1
+agent reached landmark-------------------------------- 2
+actions ['R', 'L', 'U']
+------------------------all agents reached landmarks-------------------
+total rewards 12

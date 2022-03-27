@@ -75,11 +75,13 @@ class Enviroment:
         for landmark in self.all_landmarks:
             landmark.reset()
 
-        # if self.type == "random":
-        #     self.agents_state = [self.decode_state(random.randint(0, 18))  for _ in range(0, N_AGENTS)]
-        #     self.initial_states = self.agents_state
-        # else: 
-        self.agents_state = self.initial_states
+        if self.type == "random":
+            new_states = [self.decode_state(random.randint(0, 18))  for _ in range(0, N_AGENTS)]
+            self.agents_state = [self.return_state(new_state[0], new_state[1]) for new_state in new_states]
+            self.initial_states = self.agents_state
+            return [new_states, ENEMY_POS[ : self.n_agents]]
+        else:
+            self.agents_state = self.initial_states
 
         return [PLAYER_POS[ : self.n_agents], ENEMY_POS[ : self.n_agents]]
 
