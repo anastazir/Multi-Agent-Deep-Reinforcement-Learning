@@ -5,6 +5,10 @@ import math
 from IPython.display import clear_output
 from config import *
 from landmark import Landmark
+import numpy as np, cv2
+import matplotlib.pyplot as plt
+import random
+
 class Enviroment:
 
     def __init__(self, initial_states = [], enemy_states = [], type = "stick") -> None:
@@ -20,6 +24,37 @@ class Enviroment:
         self.type = type
         self.all_landmarks = [Landmark(index, enemy_states[index]) for index in range(len(enemy_states))]
         self.obstruction_states = [self.return_state(i, j) for i, j in OBSTRUCTION_P0S]
+        self.reset_map = self.create_map()
+        self.map_image = self.create_map()
+
+    def create_map(self):
+        black_env = np.zeros((GRID_SIZE*10,GRID_SIZE*10), np.uint8)
+        # for dx in range(0, GRID_SIZE):
+        #     for dy in range(0, GRID_SIZE):
+        #         Y_len = dy
+        #         y_len = dy+GRID_SIZE
+        #         X_len = dx
+        #         x_len = dx+GRID_SIZE
+        #         if self.return_state(dy, dx) in self.enemy_states:
+        #             black_env[Y_len:y_len, X_len:x_len] = 255
+        #         elif self.return_state(dy, dx) in self.agents_state:
+        #             black_env[Y_len:y_len, X_len:x_len] = 100
+        #         else:
+        #             black_env[Y_len:y_len, X_len:x_len] = 10
+        for state in self.enemy_states:
+            y, x = self.decode_state(state)
+            x = x*10
+            y = y*10
+            black_env[y:y+10, x:x+10] = 10
+        for state in self.agents_state:
+            y, x = self.decode_state(state)
+            x = x*10
+            y = y*10
+            black_env[y:y+10, x:x+10] = 100
+        black_env = np.expand_dims(black_env, axis=2)
+        black_env = black_env.reshape(-1, GRID_SIZE*10, GRID_SIZE*10, 1)
+        return black_env
+
     def step(self, actions):
         new_states = []
         rewards = []
@@ -42,7 +77,12 @@ class Enviroment:
                     terminal.append(False)
             i+=1
         self.agents_state = new_states
-        return [new_states, rewards, terminal]
+        self.map_image = self.create_map()
+        return [self.map_image, new_states, rewards, terminal]
+
+    def show_image(self):
+        plt.imshow(self.map_image[0])
+        plt.show()
 
     def render(self):
         print('--------------------------------------------')
@@ -76,7 +116,9 @@ class Enviroment:
             self.initial_states = self.agents_state
         else: 
             self.agents_state = self.initial_states
-        return [self.agents_state, self.enemy_states]
+
+        self.map_image = self.reset_map
+        return [self.map_image, self.agents_state, self.enemy_states]
 
     def isTerminalState(self, state):
         if state in self.enemy_states:
@@ -101,7 +143,7 @@ class Enviroment:
             return False
 
     def decode_state(self, state):
-        return int(state/self.grid_size), state%self.grid_size
+        return int(state/self.grid_size), int(state%self.grid_size)
 
     def return_state(self, row, col):
         return row*self.m + col 
