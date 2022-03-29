@@ -1,10 +1,11 @@
 import random
 import numpy as np
+import tensorflow as tf
 from config                      import *
 from collections                 import deque
 from tensorflow.keras            import Sequential
 from tensorflow.keras.layers     import Dense
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam, RMSprop
 from tensorflow.keras.models     import load_model
 
 class Agent:
@@ -14,7 +15,7 @@ class Agent:
         self.test = test
         self.state_size = GRID_SIZE*GRID_SIZE
         self.action_size = 5
-        self._optimizer = Adam(learning_rate=LEARNING_RATE)
+        self._optimizer = RMSprop(learning_rate=LEARNING_RATE)
         self.index = index
         self.terminal = False
         self.replay_memory_len = REPLAY_MEMORY_LEN
@@ -34,16 +35,38 @@ class Agent:
         self.expirience_replay.append((new_state, reward, done, state, action))
 
     def _build_compile_model(self):
-        model = Sequential()
-        model.add(Dense(32, input_dim=self.state_size, activation='relu'))
-        model.add(Dense(32, activation='relu'))
-        model.add(Dense(ACTION_SIZE, activation='linear'))
-        model.compile(loss='mse', optimizer=self._optimizer)
+        # model = Sequential()
+        # model.add(Dense(32, input_shape=(GRID_SIZE, GRID_SIZE,1), activation='relu'))
+        # model.add(Dense(32, activation='relu'))
+        # model.add(Dense(ACTION_SIZE, activation='linear'))
+        # model.compile(loss='mse', optimizer=self._optimizer)
+        # return model
+        model=tf.keras.Sequential([
+            tf.keras.layers.Conv2D(64, (2,2), input_shape=(GRID_SIZE*10, GRID_SIZE*10, 1), activation='relu'),
+            # tf.keras.layers.MaxPooling2D(2,2),
+
+            tf.keras.layers.Conv2D(128, (2,2),  activation='relu'),
+            # tf.keras.layers.MaxPooling2D(2,2),
+
+            # tf.keras.layers.Conv2D(256, (3,3), activation='relu'),
+            # tf.keras.layers.MaxPooling2D(2,2),
+            
+            # tf.keras.layers.Conv2D(512, (3,3), activation='relu'),
+            # tf.keras.layers.MaxPooling2D(2,2),
+
+            tf.keras.layers.Flatten(),
+
+            tf.keras.layers.Dense(128,activation='relu'),
+            tf.keras.layers.Dense(32,activation='relu'),
+
+            tf.keras.layers.Dense(len(POSSIBLE_ACTIONS),activation='softmax')
+        ])
+        model.compile(optimizer=self._optimizer,loss="mse",metrics=["mean_squared_error"])
         return model
 
     def act(self, state, possibleActions):
         if self.terminal:
-            return possibleActions[4]
+            return 'S'
         if np.random.rand() < self.epsilon and not self.test:
             print("random action")
             return possibleActions[np.random.choice(POSSIBLE_ACTIONS_NUM, size=1, replace=False)[0]]
@@ -55,10 +78,16 @@ class Agent:
             return
         minibatch=random.sample(self.expirience_replay, BATCH_SIZE)
         for new_state, reward, done, state, action in minibatch:
+            new_state = new_state/255.
+            state = state/255.
+            # print(new_state.shape, reward, done, state.shape, action)
             target= reward
             if not done:
-                target=reward + self.gamma* np.amax(self.model.predict(new_state))
+                target=reward + self.gamma* np.amax(self.model.predict(new_state)[0])
             target_f= self.model.predict(state)
+            # print("targetf", target_f)
+            # print("target", target)
+            # print("action", action)
             target_f[0][action]= target
             self.model.fit(state, target_f, epochs=1, verbose=0)
 
@@ -72,10 +101,10 @@ class Agent:
         self.y = pos[1]
 
     def save_model(self):
-        self.model.save(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}.h5")
+        self.model.save(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}_image.h5")
 
     def load_model(self):
-        self.model = load_model(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}.h5")
+        self.model = load_model(f"./saved_models/0{self.index}_{N_AGENTS}_{GRID_SIZE}_{REPLAY_MEMORY_LEN}_{TIME_STEPS}_{self.type}_image.h5")
 
     def return_coordinates(self):
         return (self.x, self.y)
