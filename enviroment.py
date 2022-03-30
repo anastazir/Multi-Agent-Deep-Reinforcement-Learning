@@ -5,7 +5,7 @@ import math
 from IPython.display import clear_output
 from config import *
 from landmark import Landmark
-import numpy as np, cv2
+import numpy as np
 import matplotlib.pyplot as plt
 import random
 
@@ -29,18 +29,6 @@ class Enviroment:
 
     def create_map(self):
         black_env = np.zeros((GRID_SIZE*10,GRID_SIZE*10), np.uint8)
-        # for dx in range(0, GRID_SIZE):
-        #     for dy in range(0, GRID_SIZE):
-        #         Y_len = dy
-        #         y_len = dy+GRID_SIZE
-        #         X_len = dx
-        #         x_len = dx+GRID_SIZE
-        #         if self.return_state(dy, dx) in self.enemy_states:
-        #             black_env[Y_len:y_len, X_len:x_len] = 255
-        #         elif self.return_state(dy, dx) in self.agents_state:
-        #             black_env[Y_len:y_len, X_len:x_len] = 100
-        #         else:
-        #             black_env[Y_len:y_len, X_len:x_len] = 10
         for state in self.enemy_states:
             y, x = self.decode_state(state)
             x = x*10
@@ -51,6 +39,13 @@ class Enviroment:
             x = x*10
             y = y*10
             black_env[y:y+10, x:x+10] = 100
+        if self.type == "obstruction":
+            for state in self.obstruction_states:
+                y, x = self.decode_state(state)
+                x = x*10
+                y = y*10
+                black_env[y:y+10, x:x+10] = 200
+
         black_env = np.expand_dims(black_env, axis=2)
         black_env = black_env.reshape(-1, GRID_SIZE*10, GRID_SIZE*10, 1)
         return black_env
@@ -112,12 +107,17 @@ class Enviroment:
             landmark.reset()
 
         if self.type == "random":
-            self.agents_state = [random.randint(0, 18)  for _ in range(0, N_AGENTS)]
+            self.agents_state = [random.randint(0, 10)  for _ in range(0, N_AGENTS)]
             self.initial_states = self.agents_state
+        elif self.type == "random_enemy":
+            self.enemy_states = [random.randint(11, 24)  for _ in range(0, N_AGENTS)]
+            for landmark in self.all_landmarks:
+                landmark.state = self.enemy_states[landmark.index]
+                landmark.x, landmark.y = self.decode_state(self.enemy_states[landmark.index])
+            self.agents_state = self.initial_states
         else: 
             self.agents_state = self.initial_states
-
-        self.map_image = self.reset_map
+        self.map_image = self.create_map()
         return [self.map_image, self.agents_state, self.enemy_states]
 
     def isTerminalState(self, state):
@@ -146,7 +146,7 @@ class Enviroment:
         return int(state/self.grid_size), int(state%self.grid_size)
 
     def return_state(self, row, col):
-        return row*self.m + col 
+        return row*self.m + col
 
     def give_reward(self, state):
         state_pos = self.decode_state(state)
