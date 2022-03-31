@@ -23,7 +23,7 @@ STATE_SIZE        = GRID_SIZE*GRID_SIZE
 
 PLAYER_POS        = [(0,0)]
 ENEMY_POS         = [(4,4)]
-OBSTRUCTION_P0S   = [(2,0)]
+OBSTRUCTION_P0S   = [(1, 4), (2, 2), (4, 0)]
 
 BATCH_SIZE        = 32
 REPLAY_MEMORY_LEN = 2000
