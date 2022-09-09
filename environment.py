@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-class Enviroment:
+class Environment:
 
     def __init__(self, initial_states = [], enemy_states = [], type = "stick") -> None:
         self.possibleActions = POSSIBLE_ACTIONS
