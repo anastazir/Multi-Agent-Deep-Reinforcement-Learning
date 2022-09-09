@@ -2,7 +2,7 @@ import  time
 import  numpy as np
 from    config          import *
 from    agent           import Agent
-from    enviroment      import Enviroment
+from    environment      import Environment
 from    IPython.display import clear_output
 from    matplotlib      import pyplot as plt
 import  random
@@ -46,7 +46,7 @@ enemy_states = []
 for enemy_pos in enemy_list_pos:
     enemy_states.append(state_encode(enemy_pos[0], enemy_pos[1]))
 
-env = Enviroment(initial_states = initial_states, enemy_states = enemy_states, type = type)
+env = Environment(initial_states = initial_states, enemy_states = enemy_states, type = type)
 
 def run():
     total_step = 0
